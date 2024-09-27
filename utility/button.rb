@@ -4,7 +4,7 @@ class Button
     @y = args[:y] || 0
     @width = args[:width] || 200
     @height = args[:height] || 300
-    @color = args[:color] || [0, 255, 255, 0]
+    @color = args[:color] || [255, 255, 255, 0]
     @msg = args[:msg] || ""
   end
 

@@ -7,6 +7,7 @@ require_relative './scenes/result'
 require_relative './utility/button'
 
 $font30 = Font.new(30)
+$font60 = Font.new(60)
 Window.caption = "デジタル射的"
 scene_manager = SceneManager.new()
 
