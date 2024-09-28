@@ -5,6 +5,7 @@ require_relative './scenes/title'
 require_relative './scenes/game'
 require_relative './scenes/result'
 require_relative './utility/button'
+require_relative './utility/target'
 
 $font30 = Font.new(30)
 $font60 = Font.new(60)
