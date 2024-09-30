@@ -8,7 +8,7 @@ class Game
     @level = 0
     @targets = []
     @start_time = nil
-    @limit_time = 60
+    @limit_time = 10
   end
 
   # 的の生成
@@ -35,11 +35,13 @@ class Game
   # sleep 2ではなく、メインループから戻りながら2秒待機するだけでよい
   def end_view
     Window.draw_font(100, 100, "終了", $font90)
+    res = [@level, @score]
     sleep 2
-    return :result,  [@level, @score]
+    reset
+    return :result,  res
   end
 
-  def do
+  def do(args = {})
     if Input.key_push?(K_ESCAPE)
       return :title, nil
     end
