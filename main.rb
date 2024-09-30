@@ -9,6 +9,7 @@ require_relative './utility/target'
 
 $font30 = Font.new(30)
 $font60 = Font.new(60)
+$font90 = Font.new(90)
 Window.caption = "デジタル射的"
 scene_manager = SceneManager.new()
 
