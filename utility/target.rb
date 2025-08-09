@@ -36,17 +36,17 @@ class Target
       @time += @speed
       k = @time / 100
       if k == 0
-        @x = @base_x + (@radius * 2 / 100.0) * @time
+        @x = @base_x - @radius + (@radius * 2 / 100.0) * (@time % 100)
         @y = @base_y + @radius
       elsif k == 1
         @x = @base_x + @radius
-        @y = @base_y - (@radius * 2 / 100.0) * @time
+        @y = @base_y + @radius - (@radius * 2 / 100.0) * (@time % 100)
       elsif k == 2
-        @x = @base_x - (@radius * 2 / 100.0) * @time
+        @x = @base_x + @radius - (@radius * 2 / 100.0) * (@time % 100)
         @y = @base_y - @radius
       elsif k == 3
-        @x = @base_x + @radius
-        @y = @base_y + (@radius * 2 / 100.0) * @time
+        @x = @base_x - @radius
+        @y = @base_y - @radius + (@radius * 2 / 100.0) * (@time % 100)
       end
       @time %= 400
     when :warp

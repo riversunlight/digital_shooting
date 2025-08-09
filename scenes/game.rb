@@ -59,8 +59,60 @@ class Game
 
       @targets << Target.new(base_x: 300, base_y: 300, move_kind: :circle, point: 10, speed: 10, radius:100)
     when 10
-      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 1, radius:100)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 50)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 100)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 150)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 250)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 200)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 350)
+      @targets << Target.new(base_x: 300, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 300)
     when 11
+      20.times do
+        @targets << Target.new(base_x: Random.rand(50 .. 550), base_y:Random.rand(100 .. 450), move_kind: :warp, speed: 30, point: 10, radius: 50)
+      end
+    when 12
+      5.times do |i|
+        @targets << Target.new(base_x: 50 + i * 100, base_y:300, move_kind: :ypendulum, speed: 15, point: 10, radius: 100)
+      end
+      5.times do |i|
+        @targets << Target.new(base_x: 300, base_y:100 + i * 50, move_kind: :xpendulum, speed: 15, point: 10, radius: 100)
+      end
+    when 13
+      5.times do |i|
+        @targets << Target.new(base_x: 300, base_y:300, move_kind: :circle, speed: 15, point: 10, radius: 30 + i * 20)
+      end
+      @targets << Target.new(base_x: 400, base_y:400, move_kind: :circle, speed: 15, point: 10, radius: 80)
+      @targets << Target.new(base_x: 200, base_y:200, move_kind: :xpendulum, speed: 15, point: 10, radius: 80)
+      @targets << Target.new(base_x: 280, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100)
+      @targets << Target.new(base_x: 300, base_y: 280, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 50)
+      @targets << Target.new(base_x: 320, base_y: 300, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 100)
+      @targets << Target.new(base_x: 300, base_y: 320, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 150)
+      @targets << Target.new(base_x: 100, base_y: 400, move_kind: :square, point: 10, speed: 2, radius:100, start_time: 250)
+    when 14
+      5.times do |i|
+        @targets << Target.new(base_x: 50 + i * 100, base_y:300, move_kind: :circle, speed: 20, point: 10, radius: 20)
+      end
+      5.times do |i|
+        @targets << Target.new(base_x: 300, base_y:100 + i * 50, move_kind: :circle, speed: 20, point: 10, radius: 20)
+      end
+      5.times do |i|
+        @targets << Target.new(base_x: 300, base_y:100 + i * 50, move_kind: :xpendulum, speed: 30, point: 10, radius: 150)
+      end
+    when 15
+      40.times do
+        @targets << Target.new(base_x: Random.rand(50 .. 550), base_y:Random.rand(100 .. 450), move_kind: :warp, speed: 30, point: 10, radius: 50)
+      end
+      8.times do |i|
+        @targets << Target.new(base_x: 50 + i * 100, base_y:300, move_kind: :ypendulum, speed: 15, point: 10, radius: 100)
+      end
+      8.times do |i|
+        @targets << Target.new(base_x: 300, base_y:100 + i * 50, move_kind: :xpendulum, speed: 15, point: 10, radius: 100)
+      end
+      5.times do |i|
+        @targets << Target.new(base_x: 50 + i * 100, base_y:300, move_kind: :circle, speed: 20, point: 10, radius: 20)
+      end
+    when 16
       #TODO: 制限時間的に動かないのを修正
       @level = 1
     end
