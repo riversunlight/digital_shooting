@@ -1,9 +1,9 @@
 class Button
   def initialize(args={})
-    @x = args[:x] || 0
-    @y = args[:y] || 0
-    @width = args[:width] || 200
-    @height = args[:height] || 300
+    @x = (args[:x] || 0) * $scale
+    @y = (args[:y] || 0) * $scale
+    @width = (args[:width] || 200) * $scale
+    @height = (args[:height] || 300) * $scale
     @color = args[:color] || [255, 255, 255, 0]
     @msg = args[:msg] || ""
   end

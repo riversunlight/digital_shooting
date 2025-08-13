@@ -141,7 +141,7 @@ class Game
 
     Window.draw_font(0, 0, "レベル: #{@level}", $font30)
     Window.draw_font(0, 30, "スコア: #{@score}", $font30)
-    Window.draw_font(300, 0, "残り時間: #{[(@limit_time - passed_time).to_i, 0].max}秒", $font30)
+    Window.draw_font(500, 0, "残り時間: #{[(@limit_time - passed_time).to_i, 0].max}秒", $font30)
 
     if passed_time > @limit_time
       if passed_time > @limit_time + 2
