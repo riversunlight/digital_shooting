@@ -5,11 +5,13 @@ class Result
   end
 
   def decide_rank(score)
-    if score < 200
+    if score < 230
+      return "D"
+    elsif score < 550
       return "C"
-    elsif score < 600
+    elsif score < 650
       return "B"
-    elsif score < 1000
+    elsif score < 850
       return "A"
     else
       return "S"
